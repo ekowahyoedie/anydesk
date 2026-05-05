@@ -7,3 +7,12 @@ sudo apt install anydesk -y
 
 ##RESET ID
 wget --no-cache -O /tmp/reset_anydesk_id.sh https://raw.githubusercontent.com/MarcoYolanga/linux_reset_anydesk_id/master/reset_anydesk_id.sh && sudo chmod +x /tmp/reset_anydesk_id.sh && sudo /tmp/reset_anydesk_id.sh
+
+##Disbale wayland
+sudo su
+nano /etc/gdm3/custom.conf
+
+WaylandEnable=false
+    # Enabling automatic login
+    AutomaticLoginEnable=true
+    AutomaticLogin=$USERNAME
